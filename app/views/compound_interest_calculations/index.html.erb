@@ -7,7 +7,7 @@
     <th>Years</th> 
   </tr>
 
-  <% @compound_interest_calulations.each do |compound_interest| %>
+  <% @compound_interest_calculations.each do |compound_interest| %>
     <tr>
       <td><%= compound_interest.amount&.round(2) %></td>
       <td><%= compound_interest.principal&.round(2) %></td>

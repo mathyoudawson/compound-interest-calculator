@@ -1,0 +1,2 @@
+module CompoundInterestCalculationsHelper
+end
