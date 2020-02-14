@@ -1,0 +1,18 @@
+<h1>Compound Interest Calculations</h1>
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Principal</th>
+    <th>Interest Rate</th>
+    <th>Years</th> 
+  </tr>
+
+  <% @compound_interests.each do |compound_interest| %>
+    <tr>
+      <td><%= compound_interest.amount&.round(2) %></td>
+      <td><%= compound_interest.principal&.round(2) %></td>
+      <td><%= compound_interest.interest_rate&.round(2) %></td>
+      <td><%= compound_interest.years %></td>
+    </tr>
+  <% end %>
+</table>

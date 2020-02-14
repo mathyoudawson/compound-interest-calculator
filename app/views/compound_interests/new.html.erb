@@ -1,0 +1,12 @@
+<%= form_for @compound_interest do |f| %>
+  <%= f.label :principal %>
+  <%= f.number_field :principal, min: 0, step: 0.01 %>
+
+  <%= f.label :interest_rate %>
+  <%= f.number_field :interest_rate, min: 0, step: 0.01 %>
+
+  <%= f.label :years %>
+  <%= f.number_field :years, min: 0, step: 0.01 %>
+
+  <%= f.submit 'Calculate' %>
+<% end %>
