@@ -1,12 +1,19 @@
-<%= form_for @compound_interest_calculation do |f| %>
-  <%= f.label :principal %>
-  <%= f.number_field :principal, min: 0, step: 0.01 %>
-
-  <%= f.label :interest_rate %>
-  <%= f.number_field :interest_rate, min: 0, step: 0.01 %>
-
-  <%= f.label :years %>
-  <%= f.number_field :years, min: 0, step: 0.01 %>
-
-  <%= f.submit 'Calculate' %>
+<h2>New Compound Interest Calculation</h1>
+<% if @compound_interest_calculation.errors.present? %>
+  <%= render :partial => 'errors' %>
 <% end %>
+
+<div>
+  <%= form_for @compound_interest_calculation do |f| %>
+    <%= f.label :principal %>
+    <%= f.number_field :principal, min: 0, step: 0.01 %>
+
+    <%= f.label :interest_rate %>
+    <%= f.number_field :interest_rate, min: 0, step: 0.01 %>
+
+    <%= f.label :years %>
+    <%= f.number_field :years, min: 0, step: 0.01 %>
+
+    <%= f.submit 'Calculate' %>
+  <% end %>
+</div>

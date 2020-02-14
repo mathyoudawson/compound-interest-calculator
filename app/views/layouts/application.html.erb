@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <header>
+      <h1>Compound Interest Calculator</h1>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to 'New Calculation', new_compound_interest_calculation_path %>
+          </li>
+          <li>
+            <%= link_to 'All Calculations', compound_interest_calculations_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

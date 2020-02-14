@@ -13,7 +13,6 @@ class CompoundInterestCalculationsController < ApplicationController
 
   def create
     @compound_interest_calculation = CompoundInterestCalculation.new(compound_interest_calculation_params)
-    @compound_interest_calculation.calculate_compound_interest
 
     if @compound_interest_calculation.save
       render :show
